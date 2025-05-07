@@ -1,0 +1,628 @@
+@prefix : <http://www.semanticweb.org/hp/ontologies/2025/3/capstone/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hp/ontologies/2025/3/capstone/> .
+
+<http://www.semanticweb.org/hp/ontologies/2025/3/capstone> rdf:type owl:Ontology ;
+                                                            rdfs:comment "this is anology about capstone project"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasDesignDocument
+:hasDesignDocument rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Documentation ;
+                   rdfs:range :Design_Document .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasDocumentation
+:hasDocumentation rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Capstone_project ;
+                  rdfs:range :Documentation .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasFinalPropsal
+:hasFinalPropsal rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Proposal ;
+                 rdfs:range :Final_Proposal .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasFinalReportDocument
+:hasFinalReportDocument rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Documentation ;
+                        rdfs:range :FinalReport_Document .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasInitialProposal
+:hasInitialProposal rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Proposal ;
+                    rdfs:range :intial_proposal .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasInnovationCriteria
+:hasInnovationCriteria rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Evaluation_Criteria ;
+                       rdfs:range :Innovation_Criteria .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasPresentationCriteria
+:hasPresentationCriteria rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Evaluation_Criteria ;
+                         rdfs:range :Presentation_Criteria .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasSRSDocument
+:hasSRSDocument rdf:type owl:ObjectProperty ;
+                rdfs:domain :Documentation ;
+                rdfs:range :SRS_Document .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/hasStakeholder
+:hasStakeholder rdf:type owl:ObjectProperty ;
+                rdfs:domain :Capstone_project ;
+                rdfs:range :Stakeholder .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Domain
+:has_Domain rdf:type owl:ObjectProperty ;
+            rdfs:domain :Capstone_project ;
+            rdfs:range :Project_Domain .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_EvaluationCriteria
+:has_EvaluationCriteria rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Capstone_project ;
+                        rdfs:range :Evaluation_Criteria .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Evaluator
+:has_Evaluator rdf:type owl:ObjectProperty ;
+               rdfs:domain :Capstone_project ;
+               rdfs:range :Evalutor .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Milestone
+:has_Milestone rdf:type owl:ObjectProperty ;
+               rdfs:domain :Timeline ;
+               rdfs:range :Milestone .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Presentation
+:has_Presentation rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Capstone_project ;
+                  rdfs:range :Final_Presentation .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Proposal
+:has_Proposal rdf:type owl:ObjectProperty ;
+              rdfs:domain :Capstone_project ;
+              rdfs:range :Proposal .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Report
+:has_Report rdf:type owl:ObjectProperty ;
+            rdfs:domain :Capstone_project ;
+            rdfs:range :Project_Report .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Student
+:has_Student rdf:type owl:ObjectProperty ;
+             rdfs:domain :Capstone_project ;
+             rdfs:range :Students .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Supervisor
+:has_Supervisor rdf:type owl:ObjectProperty ;
+                rdfs:domain :Capstone_project ;
+                rdfs:range :Supervisor .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_TechnicalCriteria
+:has_TechnicalCriteria rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Evaluation_Criteria ;
+                       rdfs:range :Technical_Criteria .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Timeline
+:has_Timeline rdf:type owl:ObjectProperty ;
+              rdfs:domain :Capstone_project ;
+              rdfs:range :Milestone .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/uses_Technology
+:uses_Technology rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Capstone_project ;
+                 rdfs:range :Timeline .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/documentName
+:documentName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Documentation ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/domainDescription
+:domainDescription rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Project_Domain ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/domainName
+:domainName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Project_Domain ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/endDate
+:endDate rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Timeline ;
+         rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/evaluationScore
+:evaluationScore rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Evaluation_Criteria ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/evaluatorName
+:evaluatorName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Evalutor ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/fileformat
+:fileformat rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Documentation ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/milestoneDate
+:milestoneDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Milestone ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/milestoneStatus
+:milestoneStatus rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Milestone ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/milestoneTitle
+:milestoneTitle rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Milestone ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/presentationDate
+:presentationDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Final_Presentation ;
+                  rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/presenterName
+:presenterName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Final_Presentation ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/projectDescription
+:projectDescription rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Capstone_project ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/projectEndDate
+:projectEndDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Capstone_project ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/projectStartDate
+:projectStartDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Capstone_project ;
+                  rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/projectTitle
+:projectTitle rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Capstone_project ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/proposalStatus
+:proposalStatus rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Proposal ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/prsentationScore
+:prsentationScore rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Final_Presentation ;
+                  rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/remarks
+:remarks rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Evaluation_Criteria ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/reportDate
+:reportDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Project_Report ;
+            rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/reportTitle
+:reportTitle rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Project_Report ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/reportVersion
+:reportVersion rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Project_Report ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/startDate
+:startDate rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Timeline ;
+           rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/studentID
+:studentID rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Students ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/studentName
+:studentName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Students ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/submissionDate
+:submissionDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Proposal ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/supervisorName
+:supervisorName rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Supervisor ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/techName
+:techName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Technology_Used ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/techType
+:techType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Technology_Used ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/uploadDate
+:uploadDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Documentation ;
+            rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :startDate ;
+         rdfs:domain :Technology_Used ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/versionNumber
+:versionNumber rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Documentation ;
+               rdfs:range xsd:decimal ,
+                          xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/AI_Domain
+:AI_Domain rdf:type owl:Class ;
+           rdfs:subClassOf :Project_Domain .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Capstone_project
+:Capstone_project rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasDocumentation ;
+                                    owl:someValuesFrom :Documentation
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasStakeholder ;
+                                    owl:someValuesFrom :Stakeholder
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_Domain ;
+                                    owl:someValuesFrom :Project_Domain
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :uses_Technology ;
+                                    owl:someValuesFrom :Technology_Used
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_Proposal ;
+                                    owl:allValuesFrom :Proposal
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_Timeline ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :Timeline
+                                  ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Database
+:Database rdf:type owl:Class ;
+          rdfs:subClassOf :Technology_Used .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Design_Document
+:Design_Document rdf:type owl:Class ;
+                 rdfs:subClassOf :Documentation .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Documentation
+:Documentation rdf:type owl:Class ;
+               rdfs:subClassOf :Capstone_project .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Draft_Report
+:Draft_Report rdf:type owl:Class ;
+              rdfs:subClassOf :Project_Report .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Evaluation_Criteria
+:Evaluation_Criteria rdf:type owl:Class ;
+                     rdfs:subClassOf :Capstone_project .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Evalutor
+:Evalutor rdf:type owl:Class ;
+          rdfs:subClassOf :Stakeholder .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/FinalReport_Document
+:FinalReport_Document rdf:type owl:Class ;
+                      rdfs:subClassOf :Documentation .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Final_Demo
+:Final_Demo rdf:type owl:Class ;
+            rdfs:subClassOf :Milestone .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Final_Presentation
+:Final_Presentation rdf:type owl:Class ;
+                    rdfs:subClassOf :Capstone_project ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :presentationDate ;
+                                      owl:someValuesFrom xsd:dateTime
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :presenterName ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :prsentationScore ;
+                                      owl:someValuesFrom xsd:decimal
+                                    ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Final_Proposal
+:Final_Proposal rdf:type owl:Class ;
+                rdfs:subClassOf :Proposal .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Final_Report
+:Final_Report rdf:type owl:Class ;
+              rdfs:subClassOf :Project_Report .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Final_VivaPresentation
+:Final_VivaPresentation rdf:type owl:Class ;
+                        rdfs:subClassOf :Final_Presentation .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Framework
+:Framework rdf:type owl:Class ;
+           rdfs:subClassOf :Technology_Used .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Gantt_Chart
+:Gantt_Chart rdf:type owl:Class ;
+             rdfs:subClassOf :Timeline .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Hardware_Tool
+:Hardware_Tool rdf:type owl:Class ;
+               rdfs:subClassOf :Technology_Used .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Innovation_Criteria
+:Innovation_Criteria rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Mid_Presentation
+:Mid_Presentation rdf:type owl:Class ;
+                  rdfs:subClassOf :Final_Presentation .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Milestone
+:Milestone rdf:type owl:Class ;
+           rdfs:subClassOf :Capstone_project ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :milestoneDate ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :milestoneStatus ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :milestoneTitle ;
+                             owl:someValuesFrom xsd:string
+                           ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Presentation_Criteria
+:Presentation_Criteria rdf:type owl:Class ;
+                       rdfs:subClassOf :Evaluation_Criteria .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Programming_Language
+:Programming_Language rdf:type owl:Class ;
+                      rdfs:subClassOf :Technology_Used .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Project_Domain
+:Project_Domain rdf:type owl:Class ;
+                rdfs:subClassOf :Capstone_project ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :domainDescription ;
+                                  owl:someValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :domainName ;
+                                  owl:someValuesFrom xsd:string
+                                ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Project_Report
+:Project_Report rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :reportDate ;
+                                  owl:someValuesFrom xsd:dateTime
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :reportTitle ;
+                                  owl:someValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :reportVersion ;
+                                  owl:someValuesFrom xsd:string
+                                ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Proposal
+:Proposal rdf:type owl:Class ;
+          rdfs:subClassOf :Capstone_project ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :proposalStatus ;
+                            owl:someValuesFrom xsd:string
+                          ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Proposal_Submission
+:Proposal_Submission rdf:type owl:Class ;
+                     rdfs:subClassOf :Milestone .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Report_Subimission
+:Report_Subimission rdf:type owl:Class ;
+                    rdfs:subClassOf :Milestone .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/SRS_Completion
+:SRS_Completion rdf:type owl:Class ;
+                rdfs:subClassOf :Milestone .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/SRS_Document
+:SRS_Document rdf:type owl:Class ;
+              rdfs:subClassOf :Documentation .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Stakeholder
+:Stakeholder rdf:type owl:Class ;
+             rdfs:subClassOf :Capstone_project .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Students
+:Students rdf:type owl:Class ;
+          rdfs:subClassOf :Stakeholder .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Supervisor
+:Supervisor rdf:type owl:Class ;
+            rdfs:subClassOf :Stakeholder .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Technical_Criteria
+:Technical_Criteria rdf:type owl:Class ;
+                    rdfs:subClassOf :Evaluation_Criteria .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Technology_Used
+:Technology_Used rdf:type owl:Class ;
+                 rdfs:subClassOf :Capstone_project ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :techName ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :techType ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :versionNumber ;
+                                   owl:someValuesFrom xsd:string
+                                 ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Timeline
+:Timeline rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :has_Milestone ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Milestone
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :endDate ;
+                            owl:someValuesFrom xsd:dateTime
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :startDate ;
+                            owl:someValuesFrom xsd:dateTime
+                          ] .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Web_Development
+:Web_Development rdf:type owl:Class ;
+                 rdfs:subClassOf :Project_Domain .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Weekly_Plan
+:Weekly_Plan rdf:type owl:Class ;
+             rdfs:subClassOf :Timeline .
+
+
+###  http://www.semanticweb.org/hp/ontologies/2025/3/capstone/intial_proposal
+:intial_proposal rdf:type owl:Class ;
+                 rdfs:subClassOf :Proposal .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
