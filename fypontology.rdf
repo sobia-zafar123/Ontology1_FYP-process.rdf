@@ -793,7 +793,6 @@
     <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Project_Report -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Project_Report">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Capstone_project"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/reportDate"/>
@@ -923,7 +922,6 @@
     <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Timeline -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Timeline">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Capstone_project"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/has_Milestone"/>
