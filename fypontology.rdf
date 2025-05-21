@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dataontology="http://purl.obolibrary.org/obo/duo.owl">
     <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone">
         <rdfs:comment xml:lang="en">this is anology about capstone project</rdfs:comment>
     </owl:Ontology>
@@ -496,7 +497,7 @@
     <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone/version -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/version">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/startDate"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Technology_Used"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -968,6 +969,121 @@
     <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/intial_proposal">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Proposal"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#Evalutor_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#Evalutor_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Evalutor"/>
+        <evaluationScore></evaluationScore>
+        <evaluatorName></evaluatorName>
+        <remarks></remarks>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#Evalutor_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#Evalutor_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Evalutor"/>
+        <evaluationScore></evaluationScore>
+        <evaluatorName></evaluatorName>
+        <remarks></remarks>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#SRS_Document -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#SRS_Document">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/SRS_Document"/>
+        <documentName></documentName>
+        <projectTitle></projectTitle>
+        <proposalStatus></proposalStatus>
+        <submissionDate></submissionDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#design_document_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#design_document_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Design_Document"/>
+        <documentName></documentName>
+        <projectTitle></projectTitle>
+        <submissionDate></submissionDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#final_Report_document_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#final_Report_document_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/FinalReport_Document"/>
+        <documentName></documentName>
+        <endDate></endDate>
+        <projectTitle></projectTitle>
+        <submissionDate></submissionDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#student2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Students"/>
+        <projectTitle></projectTitle>
+        <studentID></studentID>
+        <studentName></studentName>
+        <supervisorName></supervisorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#student_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#student_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Students"/>
+        <projectTitle></projectTitle>
+        <studentID></studentID>
+        <studentName></studentName>
+        <supervisorName></supervisorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#students_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#students_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Students"/>
+        <projectTitle></projectTitle>
+        <studentID></studentID>
+        <studentName></studentName>
+        <supervisorName></supervisorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2025/3/capstone#supervisor_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2025/3/capstone#supervisor_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2025/3/capstone/Supervisor"/>
+        <prsentationScore></prsentationScore>
+        <submissionDate></submissionDate>
+        <supervisorName></supervisorName>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
